@@ -25,12 +25,7 @@ class ChapterOne {
             }
         }
 
-        let output = []
-
-        for (let i = 0; i < length; i += 1) {
-            output.push(input[i][length] / input[i][i])
-        }
-
+        const output = input.map((row, pointer) => row[length] / row[pointer])
         return output
     }
 
