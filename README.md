@@ -15,7 +15,7 @@ A repository for my progress learning 'Elementary Linear Algebra'
 
 ## Overview
 
-This repository is for my studies in the Mathematics Major as well as enhancing my programming skills. I want to point out this project rely stongly to 'Elementary Linear Algerbra' the 11th Edition by Howard Anton and Chris Rorres. Special thanks to the author of the book for helping me learn Elementary Linear Algebra. All the materials implemented are in the ./src/materials path.
+This repository is for my studies in the mathematics major as well as enhancing my programming skills. This project is closely related to "Elementary Linear Algebra," 11th Edition, by Howard Anton and Chris Rorres. Special thanks to the author of the book for helping me learn elementary linear algebra. All the materials implemented are in the ./src/materials path.
 
 
 ### Links
