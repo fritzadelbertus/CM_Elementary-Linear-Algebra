@@ -29,6 +29,13 @@ class ChapterOne {
         return output
     }
 
+    // Scalar Multiple
+    static matrixScalarMultiply( matrix: number[][], scalar: number) {
+        const input = matrix.slice()
+        const output = input.map((row) => row.map((cell) => cell * scalar))
+        return output
+    }
+
 }
 
 export default ChapterOne;
