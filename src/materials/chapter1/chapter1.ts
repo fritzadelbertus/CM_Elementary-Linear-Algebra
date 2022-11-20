@@ -53,8 +53,8 @@ class ChapterOne {
     return output
   }
 
-	// Matrix Transpose
-	static matrixTranspose( matrix: number[][] ) {
+  // Matrix Transpose
+  static matrixTranspose( matrix: number[][] ) {
 		const input = matrix.slice()
 		let output = []
 		for (let col = 0; col < input[0].length; col += 1) {
@@ -91,8 +91,8 @@ class ChapterOne {
 		return this.matrixTranspose(output)
   }
 
-	// Matrix Trace
-	static matrixTrace( matrix: number[][] ) {
+  // Matrix Trace
+  static matrixTrace( matrix: number[][] ) {
 		if (matrix.length !== matrix[0].length) return 'No Solution. The matrix do not have a main diagonal'
 		const output = matrix.reduce((total, pointer, index) => (total += pointer[index]), 0)
 		return output
