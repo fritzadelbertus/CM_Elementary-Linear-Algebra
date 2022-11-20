@@ -66,6 +66,7 @@ class ChapterOne {
     }
     return output
   }
+	// Hello There
 
   // Matrix Multiplication
   static matrixMultiplication( matrix1: number[][], matrix2: number[][] ) {
@@ -93,10 +94,10 @@ class ChapterOne {
 
   // Matrix Trace
   static matrixTrace( matrix: number[][] ) {
-		if (matrix.length !== matrix[0].length) return 'No Solution. The matrix do not have a main diagonal'
-		const output = matrix.reduce((total, pointer, index) => (total += pointer[index]), 0)
-		return output
-	}
+    if (matrix.length !== matrix[0].length) return 'No Solution. The matrix do not have a main diagonal'
+    const output = matrix.reduce((total, pointer, index) => (total += pointer[index]), 0)
+    return output
+  }
 
 	// New Matrix
 }
