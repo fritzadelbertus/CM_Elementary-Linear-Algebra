@@ -55,17 +55,17 @@ class ChapterOne {
 
   // Matrix Transpose
   static matrixTranspose( matrix: number[][] ) {
-		const input = matrix.slice()
-		let output = []
-		for (let col = 0; col < input[0].length; col += 1) {
-			let rowOutput = []
-			for (let row = 0; row < input.length; row += 1) {
-				rowOutput.push(input[row][col])
-			}
-			output.push(rowOutput)
-		}
-		return output
-	}
+    const input = matrix.slice()
+    let output = []
+    for (let col = 0; col < input[0].length; col += 1) {
+      let rowOutput = []
+      for (let row = 0; row < input.length; row += 1) {
+        rowOutput.push(input[row][col])
+      }
+      output.push(rowOutput)
+    }
+    return output
+  }
 
   // Matrix Multiplication
   static matrixMultiplication( matrix1: number[][], matrix2: number[][] ) {
@@ -97,6 +97,8 @@ class ChapterOne {
 		const output = matrix.reduce((total, pointer, index) => (total += pointer[index]), 0)
 		return output
 	}
+
+	// New Matrix
 }
 
 export default ChapterOne;
