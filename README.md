@@ -22,8 +22,8 @@ This repository is for my studies in the mathematics major as well as enhancing 
 
 - [Chapter One](https://github.com/fritzadelbertus/CM_Elementary-Linear-Algebra/tree/main/src/materials/chapter1/chapter1.ts)
 
-- Main URL: [Github Repo](https://github.com/fritzadelbertus/DAP-Pokedex)
-- Live Site URL: [Github Pages](https://fritzadelbertus.github.io/DAP-Pokedex/)
+- Main URL: [Github Repo]()
+- Live Site URL: [Github Pages]()
 
 ## My process
 
