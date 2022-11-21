@@ -1,4 +1,4 @@
-// CHAPTER 1 : Determinants
+// CHAPTER 2 : Determinants
 
 class ChapterTwo {
 
