@@ -20,7 +20,8 @@ This repository is for my studies in the mathematics major as well as enhancing 
 
 ### Links
 
-- [Chapter One](https://github.com/fritzadelbertus/CM_Elementary-Linear-Algebra/tree/main/src/materials/chapter1/chapter1.ts)
+- [Chapter One: Systems of Linear Equations and Matrices](https://github.com/fritzadelbertus/CM_Elementary-Linear-Algebra/tree/main/src/materials/chapter1/chapter1.ts)
+- [Chapter Two: Determinants](https://github.com/fritzadelbertus/CM_Elementary-Linear-Algebra/tree/main/src/materials/chapter2/chapter2.ts)
 
 - Main URL: [Github Repo]()
 - Live Site URL: [Github Pages]()
