@@ -9,7 +9,7 @@ class ChapterTwo {
     const input: number[][] = JSON.parse(JSON.stringify(matrix))
     const length = input.length
     // pointer = i, row to operate = j, column to operate = k
-		for (let i = 0; i < length; i += 1) {
+    for (let i = 0; i < length; i += 1) {
       if (input[i][i] === 0) return 'Mathematical Error! Cannot divide by zero'
       for (let j = i; j < length; j += 1) {
         if (j !==  i ) {
