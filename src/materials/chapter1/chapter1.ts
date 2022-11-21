@@ -1,5 +1,7 @@
 // CHAPTER 1 : Systems of Linear Equations and Matrices
 
+// Some notes around the code:
+// linsys = linear system
 
 class ChapterOne {
     
@@ -96,6 +98,83 @@ class ChapterOne {
 		if (matrix.length !== matrix[0].length) return 'No Solution. The matrix do not have a main diagonal'
 		const output = matrix.reduce((total, pointer, index) => (total += pointer[index]), 0)
 		return output
+	}
+
+	// Identity Matrix
+	static identityMatrix( size: number ) {
+		let output = [];
+		for (let i = 0; i < size; i += 1) {
+			let rowOutput = []
+			for (let j = 0; j < size; j += 1) {
+				if (i === j) {
+					rowOutput.push(1)
+				} else {
+					rowOutput.push(0)
+				}
+			}
+			output.push(rowOutput)
+		}
+		return output
+	}
+
+	// Matrix Inverse
+	// Note: for square matrices
+	static matrixInverse( matrix: number[][] ) {
+		if (matrix.length !== matrix[0].length) return 'Invalid input! Please input a square matrix'
+		const input = matrix.slice()
+		const length = input.length
+		const output = this.identityMatrix(length)
+		// pointer = i, simplify pointer's row = l, row to operate = j, column to operate = k
+		for (let i = 0; i < length; i += 1) {
+			if (input[i][i] === 0) return 'Mathematical Error! Cannot divide by zero'
+			for (let l = 0; l < length; l += 1) {
+				const inv = 1 / input[i][i]
+				input[i][l] = input[i][l] * inv
+				output[i][l] = output[i][l] * inv
+			}
+			for (let j = 0; j < length; j += 1) {
+				if (i !== j) {
+					const ratio = input[j][i] / input[i][i]
+					for (let k = 0; k < length; k += 1) {
+						input[j][k] = input[j][k] - ratio * input[i][k]
+						output[j][k] = output[j][k] - ratio * output[i][k]
+					}
+				}
+			}
+		}
+		return output
+	}
+
+	// Solve Multiple Linear System at Once
+	static solveMultipleLinsysWithInverse( matrix: number[][], coefficients: number[][][] ) {
+		const inverse = this.matrixInverse(matrix)
+		if (typeof inverse === 'string') return inverse
+		let output = []
+		for (let i = 0; i < coefficients.length; i += 1) {
+			output.push(this.matrixMultiplication(inverse, coefficients[i]))
+		}
+		return output
+	}
+
+	// Applications of Linear Systems
+	static polynomialInterpolation( listOfPoint: number[][] ) {
+		const input = listOfPoint.slice()
+		const length = input.length
+		const createRow = ( x: number, y: number, size: number ) => {
+			let output = []
+			for (let i = 0; i < size; i += 1) {
+				output.push(Math.pow(x, i))
+			}
+			output.push(y)
+			return output
+		}
+		let output = []
+		for (let j = 0; j < input.length; j += 1) {
+			output.push(createRow(input[j][0], input[j][1], length))
+		}
+		console.log(output)
+		const result = this.gaussJordanElim(output)
+		return typeof result !== 'string' ? result : result
 	}
 
 }

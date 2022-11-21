@@ -62,3 +62,36 @@ test('Matrix Trace should return the correct solution or an error', () => {
 		[[-1,2,7,0],[3,5,-8,4],[1,2,7,-3],[4,-2,1,0],[4,3,2,1]]
 	)).toStrictEqual('No Solution. The matrix do not have a main diagonal')
 })
+
+test('Created an identity matrix', () => {
+	expect(ChapterOne.identityMatrix(3)).toStrictEqual(
+		[[1,0,0],[0,1,0],[0,0,1]]
+	)
+})
+
+test('Find the inverse of a square matrix', () => {
+	expect(ChapterOne.matrixInverse(
+		[[1,2,3],[2,5,3],[1,0,8]]
+	)).toStrictEqual(
+		[[-40,16,9],[13,-5,-3],[5,-2,-1]]
+	)
+	expect(ChapterOne.matrixInverse(
+		[[1,2,3,6],[2,5,3,6],[1,0,8,6]]
+	)).toStrictEqual('Invalid input! Please input a square matrix')
+})
+
+test('Solved multiple system of linear equation at once', () => {
+	expect(ChapterOne.solveMultipleLinsysWithInverse(
+		[[1,2,3],[2,5,3],[1,0,8]], [[[4],[5],[9]],[[1],[6],[-6]]]
+	)).toStrictEqual(
+		[[[1],[0],[1]],[[2],[1],[-1]]]
+	)
+}) 
+
+test('Find a polynomial function using polynomial interpolation', () => {
+	expect(ChapterOne.polynomialInterpolation(
+		[[1,3],[2,-2],[3,-5],[4,0]]
+	)).toStrictEqual(
+		[4,3,-5,1]
+	)
+})
